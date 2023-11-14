@@ -9,7 +9,7 @@
  * dass die Nutzung dieses Codes in der Prüfung nicht zu einem Plagiat führt (dies sollte jedoch
  * abgeklärt sein).
  * 
- * Code von: https://github.com/Knall64/someSmallArrayStuff/blob/main/Arrayz.java (Stand: 14.11.23, 14:27) (ja wir reden hier nicht über meinen Schlafrythmus)
+ * Code von: https://github.com/Knall64/someSmallArrayStuff/blob/main/Arrayz.java (Stand: 14.11.23, 14:27)
  */
 //TESTARRAYS
 //[]
