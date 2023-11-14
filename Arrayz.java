@@ -1,6 +1,6 @@
 
 /*
- * Herzliches Willkommen im Array-Toolkit, Copyright David Buchner :D
+ * Herzliches Willkommen im Array-Toolkit, Copyright David :D
  * Diese Klasse ist darauf ausgelegt möglichst schnell und einfach mit Arrays jonglieren zu können,
  * insbesondere wurde ein kleiner Fokus drauf ausgelegt Arrays wie dynamische Listen behandeln zu
  * können. 
