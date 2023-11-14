@@ -28,10 +28,8 @@ class Arrayz{
         throw new UnsupportedOperationException();
     }
 
-    public static void main(String[] args){
-        int[] a = new int[]{3,4,5,6,-10,1,0};
-        sortAsc(a);
-        print(a);
+    public static void Tmain(String[] args){
+	    throw new UnsupportedOperationException();
     }
 
     /*
