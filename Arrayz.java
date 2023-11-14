@@ -446,7 +446,7 @@ class Arrayz{
      * @return Das Array mit den Vielfachheiten der einzelnen Zahlen, wiederum als Integer-Arrays mit zwei Einträgen dargestellt.
      */
     public static int[][] quantities(int[] array) {
-        int[] track = distinct(array);
+        int[] track = distinctArray(array);
 
         int[][] quant = new int[track.length][2];
 
