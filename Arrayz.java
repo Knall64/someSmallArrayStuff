@@ -385,6 +385,89 @@ class Arrayz{
         }
     }
 
+     public static void rotate(int[] array, int amount) {
+        if (amount == 0 || array.length < 2){
+            return;
+        }
+        else if (amount > 0){
+            for (int i=0;i<amount;i++){
+                rotateRight(array);
+            }
+        }
+        else if (amount < 0){
+            for (int i=0;i<abs(amount);i++){
+                rotateLeft(array);
+            }
+        }
+    }
+
+    public static void rotateRight(int[] a){
+        int[] temp = new int[a.length];
+        for (int i=0;i<a.length;i++){
+            temp[i] = a[i];
+        }
+
+        //a[0] = temp[temp.length-1];
+        for (int j=0;j<a.length-1;j++){
+            a[j+1] = temp[j];
+        }
+
+        a[0] = temp[temp.length-1];
+
+    }
+
+    public static void rotateLeft(int[] a){
+        for (int z=0;z<a.length-1;z++){
+            rotateRight(a);
+        }
+    }
+
+
+
+
+
+    public static int abs(int a){
+        if (a<0){
+            return a*-1;
+        }
+        else{
+            return a;
+        }
+    }
+	
+    /** Zählt die Anzahl an Vorkommen jeder Zahl im übergebenen Array, die in diesem mindestens einmal vorkommt.
+     *  Die Rückgabe erfolgt über ein 2D-Array, bei dem jedes innere Array aus zwei Einträgen besteht: Einer Zahl,
+     *  die im übergebenen Array vorkommt sowie der Anzahl an Vorkommen dieser.
+     *  Für jede im übergebenen Array vorkommenden Zahl gibt es ein solches inneres Array.
+     *  Diese tauchen im Rückgabewert in der gleichen Reihenfolge auf, in der die jeweils ersten Vorkommen der Zahlen
+     *  im übergebenen Array auftauchen.
+     *
+     * @param array Ein beliebiges Integer-Array
+     * @return Das Array mit den Vielfachheiten der einzelnen Zahlen, wiederum als Integer-Arrays mit zwei Einträgen dargestellt.
+     */
+    public static int[][] quantities(int[] array) {
+        int[] track = distinct(array);
+
+        int[][] quant = new int[track.length][2];
+
+        for (int z=0;z<track.length;z++){
+            quant[z][0] = track[z];
+        }
+
+        for (int i=0;i<track.length;i++){
+            int current = track[i];
+
+            for (int j=0; j<array.length;j++){
+                if (current == array[j]){
+                    quant[i][1] += 1;
+                }
+            }
+
+        }
+
+
+        return quant;
+    }
 
 
     /*
